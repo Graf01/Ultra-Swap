@@ -1,24 +1,22 @@
-// hardhat.config.ts
 
-import "dotenv/config"
-import "@nomiclabs/hardhat-etherscan"
-import "@nomiclabs/hardhat-solhint"
-import "@nomiclabs/hardhat-waffle"
-import "hardhat-abi-exporter"
-import "hardhat-deploy"
-import "hardhat-deploy-ethers"
-import "hardhat-gas-reporter"
-import "solidity-coverage"
+require('dotenv').config()
+require("@nomiclabs/hardhat-etherscan");
+require("@nomiclabs/hardhat-solhint");
+require("@nomiclabs/hardhat-waffle");
+require("hardhat-abi-exporter");
+require("hardhat-deploy");
+require("hardhat-deploy-ethers");
+require("hardhat-gas-reporter");
+require("solidity-coverage");
 
-import { HardhatUserConfig } from "hardhat/types"
-import { removeConsoleLog } from "hardhat-preprocessor"
+const { removeConsoleLog } = require("hardhat-preprocessor")
 
 const accounts = {
   mnemonic: process.env.MNEMONIC || "test test test test test test test test test test test junk",
   // accountsBalance: "990000000000000000000",
 }
 
-const config: HardhatUserConfig = {
+module.exports = {
   abiExporter: {
     path: "./abi",
     clear: false,
@@ -333,7 +331,3 @@ const config: HardhatUserConfig = {
   },
 
 }
-
-
-
-export default config
