@@ -141,6 +141,10 @@ contract Staking is Ownable, ReentrancyGuard {
         referralProgram = _referralProgram;
     }
 
+    function setMinReferralReward(uint256 _minReferralReward) external onlyOwner {
+        minReferralReward = _minReferralReward;
+    }
+
     function setReferralOwnerWithdrawAwait(uint256 _referralOwnerWithdrawAwait) external onlyOwner {
         referralOwnerWithdrawAwait = _referralOwnerWithdrawAwait;
     }
