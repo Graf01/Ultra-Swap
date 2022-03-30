@@ -54,7 +54,15 @@ contract Staking is Ownable, ReentrancyGuard {
     event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
     event EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount);
 
-    constructor(IRWRD _rewardToken, IReferral _referralProgram, uint256 _rewardPerSecond, uint256 _startTime, uint256 _firstPoolAllocPoint, uint16 _firstPoolFeePercentage, address _burnAddress) {
+    constructor(
+        IRWRD _rewardToken, 
+        IReferral _referralProgram, 
+        uint256 _rewardPerSecond, 
+        uint256 _startTime, 
+        uint256 _firstPoolAllocPoint, 
+        uint16 _firstPoolFeePercentage, 
+        address _burnAddress
+    ) {
         require(_firstPoolFeePercentage <= PERCENT_BASE, "Cannot set fee higher than 100%");
         require(_burnAddress != address(0), "Cannot set zero address");
         REWARD_TOKEN = _rewardToken;
