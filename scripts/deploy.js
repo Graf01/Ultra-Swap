@@ -36,6 +36,16 @@ async function main() {
     firstPoolFeePercentage = BigNumber.from(300);
     burnAddress = "0x528e7c77B8F3001B512e8BF305b03CeA420951cd";
 
+    console.log("Deploying with: ");
+    console.log("tokenAddress = ", tokenAddress);
+    console.log("referralAddress = ", referralAddress);
+    console.log("rewardPerSecond = ", rewardPerSecond.toString());
+    console.log("startTime = ", startTime);
+    console.log("firstPoolAllocPoint = ", firstPoolAllocPoint.toString());
+    console.log("firstPoolFeePercentage = ", firstPoolFeePercentage.toString());
+    console.log("burnAddress = ", burnAddress);
+
+
     const staking = await Staking.deploy(
       tokenAddress,
       referralAddress,
@@ -53,6 +63,8 @@ async function main() {
     await staking.setReferralOwnerWithdrawAwait(DAY);
     await staking.setReferralPercent(BigNumber.from(400));
     await staking.setMinReferralReward(BigNumber.from(ONE_ETHER.mul(BigNumber.from(2500))));
+
+     
 
   }
   
@@ -74,3 +86,13 @@ module.exports = {
   name, 
   symbol
 }
+
+
+// Ultra Token deployed to: 0x1299e57e05c2Cf8C3f31C83AE96A4C3f5a083D4a
+//https://rinkeby.etherscan.io/address/0x415D35b24bc64DdFFd19775E7dEB8ED275604c48#code
+
+// Staking deployed to: 0xb7EBCc19b825faE376d4D0F0cA39b263055601F8
+//https://rinkeby.etherscan.io/address/0xb7EBCc19b825faE376d4D0F0cA39b263055601F8#code
+
+// Referral Program deployed to: 0x882A5106f0CeE3b90E8d2B6DEb0D305dC4959De1
+// https://rinkeby.etherscan.io/address/0x882A5106f0CeE3b90E8d2B6DEb0D305dC4959De1#writeContract
