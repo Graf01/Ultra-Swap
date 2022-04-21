@@ -8,7 +8,6 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "./interfaces/IRWRD.sol";
 import "./interfaces/IReferral.sol";
 import "./interfaces/IRWRD.sol";
-import "hardhat/console.sol";
 
 
 contract StakingV2 is Ownable {
@@ -20,6 +19,7 @@ contract StakingV2 is Ownable {
         int256 rewardDebt;   
         uint256 enteredAt; 
     }
+
     // Info of each pool.
     struct PoolInfo {
         uint64 allocPoint; // How many allocation points assigned to this pool. Reward to distribute per block.
@@ -34,8 +34,6 @@ contract StakingV2 is Ownable {
 
     // The reward token!
     IRWRD public rewardToken;
-    // Block number when bonus reward period ends.
-    uint256 public bonusEndBlock;
 
     IReferral public referralProgram;
     // Reward tokens created per block.
@@ -49,10 +47,13 @@ contract StakingV2 is Ownable {
     uint256 public feesCollected;
     address public burnAddress;
 
+    uint256 public lastBalance;
+    uint256 public payedRewardForPeriod;
+
     // Info of each pool.
     PoolInfo[] public poolInfo;
     // Addresses of stake token contract.
-    IERC20[] stakeToken; 
+    IERC20[] public stakeToken; 
     // Info of each user that stakes stake tokens.
     mapping(address => bool) public excludedFromFee;
     mapping(uint256 => mapping(address => UserInfo)) public userInfo;
@@ -65,8 +66,9 @@ contract StakingV2 is Ownable {
 
     uint256 private constant ACC_SUSHI_PRECISION = 1e12;
 
-    event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
-    event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
+    event Deposit(address indexed user, uint256 indexed pid, uint256 amount, address to);
+    event Withdraw(address indexed user, uint256 indexed pid, uint256 amount, address to);
+    event Harvest(address indexed user, uint256 indexed pid, uint256 amount, address to);
     event EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount);
 
     constructor(
@@ -107,6 +109,7 @@ contract StakingV2 is Ownable {
     function pendingReward(uint256 _pid, address _user) external view returns (uint256 pending) {
         PoolInfo memory pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
+        if (!excludedFromFee[_msgSender()] && block.timestamp < user.enteredAt + DAY) return 0;
         uint256 accSushiPerShare = pool.accRewardPerShare;
         uint256 supply = pool.totalStaked;
         if (block.timestamp > pool.lastRewardTime && supply != 0) {
@@ -272,7 +275,7 @@ contract StakingV2 is Ownable {
                 rewardToken.mint(address(this), sushiReward);
                 pool.accRewardPerShare += uint128(sushiReward * ACC_SUSHI_PRECISION / lpSupply);
             }
-            pool.lastRewardTime = uint64(block.number);
+            pool.lastRewardTime = uint64(block.timestamp);
             poolInfo[pid] = pool;
         }
     }
@@ -292,7 +295,7 @@ contract StakingV2 is Ownable {
 
         stakeToken[pid].safeTransferFrom(msg.sender, address(this), amount);
 
-        // emit Deposit(msg.sender, pid, amount, to);
+        emit Deposit(msg.sender, pid, amount, to);
     }
 
     function withdraw(uint256 pid, uint256 amount, address to) public {
@@ -300,9 +303,7 @@ contract StakingV2 is Ownable {
         UserInfo storage user = userInfo[pid][to];
 
         // Effects
-        user.rewardDebt += int256(amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
-        console.log("StakingV2: withdraw(): user.amount = ", user.amount);
-        console.log("StakingV2: withdraw(): pool.totalStaked = ", pool.totalStaked);
+        user.rewardDebt -= int256(amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
         user.amount -= amount;
         poolInfo[pid].totalStaked -= amount;
 
@@ -310,7 +311,7 @@ contract StakingV2 is Ownable {
         
         stakeToken[pid].safeTransfer(to, amount);
 
-        // emit Withdraw(msg.sender, pid, amount, to);
+        emit Withdraw(msg.sender, pid, amount, to);
     }
 
     function harvest(uint256 pid, address to) public {
@@ -318,17 +319,18 @@ contract StakingV2 is Ownable {
         UserInfo storage user = userInfo[pid][msg.sender];
         int256 accumulatedReward = int256(user.amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
         uint256 _pendingReward = uint256(accumulatedReward - user.rewardDebt);
-        console.log("StakingV2: harvest(): user.enteredAt  = ", user.enteredAt);
-        console.log("StakingV2: harvest(): block.timestamp = ", block.timestamp);
+
         require(excludedFromFee[_msgSender()] || user.enteredAt + DAY <= block.timestamp, "Cannot harvest yet");
         if (_pendingReward > 0) {
             _giveRewards(_pendingReward, pool.feePercentage);
         }
-        // Effects
+
         user.rewardDebt = accumulatedReward; 
         user.enteredAt = block.timestamp > startTime ? block.timestamp : startTime;
 
-        // emit Harvest(msg.sender, pid, _pendingReward);
+        // Effects
+
+        emit Harvest(msg.sender, pid, _pendingReward, to);
     }
 
     // Withdraw without caring about rewards. EMERGENCY ONLY.
@@ -348,9 +350,9 @@ contract StakingV2 is Ownable {
     */
     function getReferralReward() external {
         require(referralDetails[_msgSender()][0] >= minReferralReward, "Not enough referral reward collected");
+        rewardToken.mint(_msgSender(), referralDetails[_msgSender()][0]);
         referralDetails[_msgSender()][0] = 0;
         referralDetails[_msgSender()][1] = block.timestamp;
-        rewardToken.mint(_msgSender(), referralDetails[_msgSender()][0]);
     }
 
     function _giveRewards(uint256 rewardAmount, uint256 feePercentage) private {

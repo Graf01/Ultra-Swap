@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for contracts/Staking.sol</title>
+    <title>Code coverage report for contracts/StakingV2.sol</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,32 +16,32 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Staking.sol
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> StakingV2.sol
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">78.13% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/119</span>
+        <span class='fraction'>100/128</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">52.08% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/46</span>
+        <span class='fraction'>25/48</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">62.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/23</span>
+        <span class='fraction'>15/24</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">77.95% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/119</span>
+        <span class='fraction'>99/127</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -403,7 +403,42 @@
 358
 359
 360
-361</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -461,14 +496,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -478,14 +505,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -494,16 +519,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -512,41 +536,67 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -604,7 +654,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -612,7 +662,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -620,7 +670,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -647,147 +697,169 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
 &nbsp;
-pragma solidity ^0.8.12;
+pragma solidity 0.8.12;
 &nbsp;
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "./interfaces/IRWRD.sol";
 import "./interfaces/IReferral.sol";
+import "./interfaces/IRWRD.sol";
+import "hardhat/console.sol";
 &nbsp;
-contract Staking is Ownable, ReentrancyGuard {
+&nbsp;
+contract StakingV2 is Ownable {
+    using SafeERC20 for IRWRD;
     using SafeERC20 for IERC20;
-&nbsp;
+    // Info of each user.
     struct UserInfo {
         uint256 amount;
-        uint256 rewardDebt;
-        uint256 enteredAt;
+        int256 rewardDebt;   
+        uint256 enteredAt; 
     }
-&nbsp;
+    // Info of each pool.
     struct PoolInfo {
-        IERC20 token;
-        uint256 allocPoint;
-        uint256 lastRewardTime;
-        uint256 accRewardPerShare;
+        uint64 allocPoint; // How many allocation points assigned to this pool. Reward to distribute per block.
+        uint64 lastRewardTime;
+        uint128 accRewardPerShare; // Accumulated reward per share, times 1e12. See below.
         uint256 totalStaked;
         uint16 feePercentage;
     }
@@ -795,13 +867,14 @@ contract Staking is Ownable, ReentrancyGuard {
     uint16 public constant PERCENT_BASE = 10000;
     uint24 public constant DAY = 86400;
 &nbsp;
-    IRWRD public immutable REWARD_TOKEN;
+    // The reward token!
+    IRWRD public rewardToken;
+&nbsp;
     IReferral public referralProgram;
-&nbsp;
+    // Reward tokens created per block.
     uint256 public rewardPerSecond;
-    uint256 public totalAllocPoint;
+    uint256 public periodDuration = 24 * 3600;
     uint256 public startTime;
-&nbsp;
     uint256 public referralPercent;
     uint256 public minReferralReward;
     uint256 public referralOwnerWithdrawAwait;
@@ -809,101 +882,113 @@ contract Staking is Ownable, ReentrancyGuard {
     uint256 public feesCollected;
     address public burnAddress;
 &nbsp;
+    uint256 public lastBalance;
+    uint256 public payedRewardForPeriod;
+&nbsp;
+    // Info of each pool.
     PoolInfo[] public poolInfo;
+    // Addresses of stake token contract.
+    IERC20[] public stakeToken; 
+    // Info of each user that stakes stake tokens.
     mapping(address =&gt; bool) public excludedFromFee;
     mapping(uint256 =&gt; mapping(address =&gt; UserInfo)) public userInfo;
-&nbsp;
     mapping(address =&gt; uint256) public exists;
     mapping(address =&gt; uint256[2]) public referralDetails;
+&nbsp;
+    // Total allocation poitns. Must be the sum of all allocation points in all pools.
+    uint256 public totalAllocPoint;
+    // The block number when reward mining starts.
+&nbsp;
+    uint256 private constant ACC_SUSHI_PRECISION = 1e12;
 &nbsp;
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
     event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
     event EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount);
 &nbsp;
-<span class="fstat-no" title="function not covered" >    constructor(IRWRD _rewardToken, IReferral _referralProgram, uint256 _rewardPerSecond, uint256 _startTime, uint256 _firstPoolAllocPoint, uint16 _firstPoolFeePercentage, address _burnAddress) {</span>
-<span class="cstat-no" title="statement not covered" >        require(_firstPoolFeePercentage &lt;= PERCENT_BASE, "Cannot set fee higher than 100%")</span>;
-<span class="cstat-no" title="statement not covered" >        require(_burnAddress != address(0), "Cannot set zero address")</span>;
-<span class="cstat-no" title="statement not covered" >        REWARD_TOKEN = _rewardToken</span>;
-<span class="cstat-no" title="statement not covered" >        referralProgram = _referralProgram</span>;
-<span class="cstat-no" title="statement not covered" >        rewardPerSecond = _rewardPerSecond</span>;
-<span class="cstat-no" title="statement not covered" >        startTime = _startTime</span>;
-<span class="cstat-no" title="statement not covered" >        totalAllocPoint = _firstPoolAllocPoint</span>;
-<span class="cstat-no" title="statement not covered" >        poolInfo.push(</span>
+    constructor(
+        IRWRD _rewardToken, 
+        IReferral _referralProgram,
+        uint256 _rewardPerSecond,
+        uint256 _startTime, 
+        uint256 _firstPoolAllocPoint, 
+        uint16 _firstPoolFeePercentage, 
+        address _burnAddress
+    ) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_firstPoolFeePercentage &lt;= PERCENT_BASE, "Cannot set fee higher than 100%");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_burnAddress != address(0), "Cannot set zero address");
+        rewardToken = _rewardToken;
+        referralProgram = _referralProgram;
+        rewardPerSecond = _rewardPerSecond;
+        startTime = _startTime;
+        totalAllocPoint = _firstPoolAllocPoint;
+        // console.log("constructor: _startTime = ", _startTime);
+        poolInfo.push(
             PoolInfo({
-                token: _rewardToken,
-                allocPoint: _firstPoolAllocPoint,
-                lastRewardTime: _startTime,
+                allocPoint: uint64(_firstPoolAllocPoint),
+                lastRewardTime: uint64(_startTime),
                 accRewardPerShare: 0,
                 totalStaked: 0,
                 feePercentage: _firstPoolFeePercentage
             })
         );
-<span class="cstat-no" title="statement not covered" >        burnAddress = _burnAddress</span>;
+        stakeToken.push(_rewardToken);
+        burnAddress = _burnAddress;
+&nbsp;
     }
 &nbsp;
-    /**
-    @notice function to know length of poolInfo
-    */
-<span class="fstat-no" title="function not covered" >    function poolLength() external view returns(uint256) {</span>
-<span class="cstat-no" title="statement not covered" >        return poolInfo.length;</span>
+    function poolLength() external view returns (uint256) {
+        return poolInfo.length;
     }
 &nbsp;
-    /**
-    @notice function to know pending reward of a given user in a given pool
-    @param _pid pool ID
-    @param _user given user address
-    */
-<span class="fstat-no" title="function not covered" >    function pendingReward(uint256 _pid, address _user) external view returns(uint256) {</span>
-<span class="cstat-no" title="statement not covered" >        PoolInfo storage pool = poolInfo[_pid];</span>
-<span class="cstat-no" title="statement not covered" >        UserInfo storage user = userInfo[_pid][_user];</span>
-<span class="cstat-no" title="statement not covered" >        uint256 accRewardPerShare = pool.accRewardPerShare;</span>
-<span class="cstat-no" title="statement not covered" >        uint256 supply = pool.totalStaked;</span>
-<span class="cstat-no" title="statement not covered" >        if (block.timestamp &gt; pool.lastRewardTime &amp;&amp; supply != 0) {</span>
-<span class="cstat-no" title="statement not covered" >            uint256 multiplier = block.timestamp - pool.lastRewardTime;</span>
-<span class="cstat-no" title="statement not covered" >            uint256 reward = (multiplier * rewardPerSecond * pool.allocPoint) / totalAllocPoint;</span>
-<span class="cstat-no" title="statement not covered" >            accRewardPerShare += (reward * 1e12) / supply</span>;
+    // View function to see pending reward on frontend.
+    function pendingReward(uint256 _pid, address _user) external view returns (uint256 pending) {
+        PoolInfo memory pool = poolInfo[_pid];
+        UserInfo storage user = userInfo[_pid][_user];
+        // console.log("StakingV2: pendingReward(): user.enteredAt      = ", user.enteredAt);
+        if (!excludedFromFee[_msgSender()] &amp;&amp; block.timestamp &lt; user.enteredAt + DAY) return 0;
+        uint256 accSushiPerShare = pool.accRewardPerShare;
+        uint256 supply = pool.totalStaked;
+        if (block.timestamp &gt; pool.lastRewardTime &amp;&amp; supply != 0) {
+            uint256 multiplier = block.timestamp - pool.lastRewardTime;
+            uint256 reward = (multiplier * rewardPerSecond * pool.allocPoint) / totalAllocPoint;
+            pool.accRewardPerShare += uint128((reward * ACC_SUSHI_PRECISION) / supply);
         }
-<span class="cstat-no" title="statement not covered" >        return ((user.amount * accRewardPerShare) / 1e12) - user.rewardDebt;</span>
+        pending = uint256(int256(user.amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION) - user.rewardDebt);
     }
 &nbsp;
-    /**
-    @notice function to create a new pool
-    @param _token staked token address
-    @param _allocPoint allocation points
-    @param _feePercentage fee percentage
-    @param _withUpdate should always be 'true'
-    */
-<span class="fstat-no" title="function not covered" >    function addPool(address _token, uint256 _allocPoint, uint16 _feePercentage, bool _withUpdate) external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        require(_token != address(REWARD_TOKEN) &amp;&amp; exists[_token] == 0, "Pool already exists")</span>;
-<span class="cstat-no" title="statement not covered" >        require(_feePercentage &lt;= PERCENT_BASE, "Cannot set fee higher than 100%")</span>;
-<span class="cstat-no" title="statement not covered" >        if (_withUpdate) {</span>
-<span class="cstat-no" title="statement not covered" >            massUpdatePools()</span>;
+    // Add a new stake token to the pool. Can only be called by the owner.
+    // XXX DO NOT add the same stake token more than once. Rewards will be messed up if you do.
+    function addPool(address _token, uint256 _allocPoint, uint16 _feePercentage, bool _withUpdate) external onlyOwner {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_token != address(rewardToken) &amp;&amp; exists[_token] == 0, "Pool already exists");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_feePercentage &lt;= PERCENT_BASE, "Cannot set fee higher than 100%");
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_withUpdate) {
+            massUpdatePools();
         }
-<span class="cstat-no" title="statement not covered" >        uint256 lastRewardTime = block.timestamp &gt; startTime ? block.timestamp : startTime;</span>
-<span class="cstat-no" title="statement not covered" >        totalAllocPoint = totalAllocPoint + _allocPoint</span>;
-<span class="cstat-no" title="statement not covered" >        exists[_token] = poolInfo.length</span>;
-<span class="cstat-no" title="statement not covered" >        poolInfo.push(</span>
+        uint256 lastRewardTime = block.timestamp &gt; startTime ? block.timestamp : startTime;
+        totalAllocPoint = totalAllocPoint + _allocPoint;
+        exists[_token] = poolInfo.length;
+        poolInfo.push(
             PoolInfo({
-                token: IERC20(_token),
-                allocPoint: _allocPoint,
-                lastRewardTime: lastRewardTime,
+                allocPoint: uint64(_allocPoint),
+                lastRewardTime: uint64(lastRewardTime),
                 accRewardPerShare: 0,
                 totalStaked: 0,
                 feePercentage: _feePercentage
             })
         );
+        stakeToken.push(IERC20(_token));
     }
 &nbsp;
-    /**
+     /**
     @notice function to set reward per second
     @param _rewardPerSecond new reward per second
     @param _withUpdate should always be 'true'
     */
-<span class="fstat-no" title="function not covered" >    function setRewardPerSecond(uint256 _rewardPerSecond, bool _withUpdate) external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        if (_withUpdate) {</span>
-<span class="cstat-no" title="statement not covered" >            massUpdatePools()</span>;
+    function setRewardPerSecond(uint256 _rewardPerSecond, bool _withUpdate) external onlyOwner {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_withUpdate) {
+            massUpdatePools();
         }
-<span class="cstat-no" title="statement not covered" >        rewardPerSecond = _rewardPerSecond</span>;
+        rewardPerSecond = _rewardPerSecond;
     }
 &nbsp;
 <span class="fstat-no" title="function not covered" >    function excludeFromFee(address[] calldata accounts) external onlyOwner {</span>
@@ -916,7 +1001,7 @@ contract Staking is Ownable, ReentrancyGuard {
 <span class="cstat-no" title="statement not covered" >        for (uint256 i; i &lt; accounts.length; i++) {</span>
 <span class="cstat-no" title="statement not covered" >            excludedFromFee[accounts[i]] = false</span>;
         }
-    }
+    }    
 &nbsp;
     /**
     @notice function to set pool allocation points
@@ -929,7 +1014,7 @@ contract Staking is Ownable, ReentrancyGuard {
 <span class="cstat-no" title="statement not covered" >            massUpdatePools()</span>;
         }
 <span class="cstat-no" title="statement not covered" >        totalAllocPoint = (totalAllocPoint - poolInfo[_pid].allocPoint) + _allocPoint</span>;
-<span class="cstat-no" title="statement not covered" >        poolInfo[_pid].allocPoint = _allocPoint</span>;
+<span class="cstat-no" title="statement not covered" >        poolInfo[_pid].allocPoint = uint64(_allocPoint)</span>;
     }
 &nbsp;
     /**
@@ -963,24 +1048,24 @@ contract Staking is Ownable, ReentrancyGuard {
     @notice function to set owner withdrawal await time for referral program
     @param _referralOwnerWithdrawAwait new owner withdrawal await time for referral program
     */
-<span class="fstat-no" title="function not covered" >    function setReferralOwnerWithdrawAwait(uint256 _referralOwnerWithdrawAwait) external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        referralOwnerWithdrawAwait = _referralOwnerWithdrawAwait</span>;
+    function setReferralOwnerWithdrawAwait(uint256 _referralOwnerWithdrawAwait) external onlyOwner {
+        referralOwnerWithdrawAwait = _referralOwnerWithdrawAwait;
     }
 &nbsp;
     /**
     @notice function to set referral program percentage
     @param _referralPercent new referral program percentage
     */
-<span class="fstat-no" title="function not covered" >    function setReferralPercent(uint256 _referralPercent) external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        referralPercent = _referralPercent</span>;
+    function setReferralPercent(uint256 _referralPercent) external onlyOwner {
+        referralPercent = _referralPercent;
     }
 &nbsp;
     /**
     @notice function to set a minimum required referral reward
     @param _minReferralReward new minimum required referral reward
     */
-<span class="fstat-no" title="function not covered" >    function setMinReferralReward(uint256 _minReferralReward) external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        minReferralReward = _minReferralReward</span>;
+    function setMinReferralReward(uint256 _minReferralReward) external onlyOwner {
+        minReferralReward = _minReferralReward;
     }
 &nbsp;
     /**
@@ -989,7 +1074,7 @@ contract Staking is Ownable, ReentrancyGuard {
     */
 <span class="fstat-no" title="function not covered" >    function getReferralRewardFor(address account) external onlyOwner {</span>
 <span class="cstat-no" title="statement not covered" >        require(referralDetails[account][1] + referralOwnerWithdrawAwait &lt;= block.timestamp, "Not enough time passed")</span>;
-<span class="cstat-no" title="statement not covered" >        REWARD_TOKEN.mint(_msgSender(), referralDetails[account][0])</span>;
+<span class="cstat-no" title="statement not covered" >        rewardToken.mint(_msgSender(), referralDetails[account][0])</span>;
 <span class="cstat-no" title="statement not covered" >        referralDetails[account][0] = 0</span>;
 <span class="cstat-no" title="statement not covered" >        if (account != address(0)) {</span>
 <span class="cstat-no" title="statement not covered" >            referralDetails[account][1] = block.timestamp</span>;
@@ -1000,129 +1085,149 @@ contract Staking is Ownable, ReentrancyGuard {
     @notice function to get owner fees
     */
 <span class="fstat-no" title="function not covered" >    function getFees() external onlyOwner {</span>
-<span class="cstat-no" title="statement not covered" >        REWARD_TOKEN.mint(_msgSender(), feesCollected)</span>;
+<span class="cstat-no" title="statement not covered" >        rewardToken.safeTransfer(_msgSender(), feesCollected)</span>;
 <span class="cstat-no" title="statement not covered" >        feesCollected = 0</span>;
     }
+    
 &nbsp;
-    /**
-    @notice function to deposit a given token amount to a given pool
-    @param _pid pool ID
-    @param _amount token amount
-    */
-<span class="fstat-no" title="function not covered" >    function deposit(uint256 _pid, uint256 _amount) external nonReentrant {</span>
-<span class="cstat-no" title="statement not covered" >        require(_amount &gt; 0, "Cannot deposit zero")</span>;
-<span class="cstat-no" title="statement not covered" >        PoolInfo storage pool = poolInfo[_pid];</span>
-<span class="cstat-no" title="statement not covered" >        UserInfo storage user = userInfo[_pid][_msgSender()];</span>
-<span class="cstat-no" title="statement not covered" >        updatePool(_pid)</span>;
-<span class="cstat-no" title="statement not covered" >        if (user.amount &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            uint256 pending = ((user.amount * pool.accRewardPerShare) / 1e12) - user.rewardDebt;</span>
-<span class="cstat-no" title="statement not covered" >            _giveRewards(pending, pool.feePercentage)</span>;
+    // Update reward vairables for all pools. Be careful of gas spending!
+    function massUpdatePools() public {
+        uint256 length = poolInfo.length;
+        for (uint256 pid = 0; pid &lt; length; ++pid) {
+            updatePool(pid);
         }
-<span class="cstat-no" title="statement not covered" >        pool.token.safeTransferFrom(_msgSender(), address(this), _amount)</span>;
-<span class="cstat-no" title="statement not covered" >        user.enteredAt = block.timestamp &gt; startTime ? block.timestamp : startTime</span>;
-<span class="cstat-no" title="statement not covered" >        user.amount += (_amount)</span>;
-<span class="cstat-no" title="statement not covered" >        pool.totalStaked += _amount</span>;
-<span class="cstat-no" title="statement not covered" >        user.rewardDebt = user.amount * (pool.accRewardPerShare) / (1e12)</span>;
-<span class="cstat-no" title="statement not covered" >        emit Deposit(_msgSender(), _pid, _amount);</span>
     }
 &nbsp;
-    /**
-    @notice function to withdraw a given token amount from a given pool
-    @param _pid pool ID
-    @param _amount token amount, should be zero for only getting rewards
-    */
-<span class="fstat-no" title="function not covered" >    function withdraw(uint256 _pid, uint256 _amount) external nonReentrant {</span>
-<span class="cstat-no" title="statement not covered" >        PoolInfo storage pool = poolInfo[_pid];</span>
-<span class="cstat-no" title="statement not covered" >        UserInfo storage user = userInfo[_pid][_msgSender()];</span>
-<span class="cstat-no" title="statement not covered" >        require(user.amount &gt;= _amount, "Cannot withdraw this much")</span>;
-<span class="cstat-no" title="statement not covered" >        require(excludedFromFee[_msgSender()] || user.enteredAt + DAY &lt;= block.timestamp, "Cannot withdraw yet")</span>;
-<span class="cstat-no" title="statement not covered" >        updatePool(_pid)</span>;
-<span class="cstat-no" title="statement not covered" >        uint256 pending = ((user.amount * pool.accRewardPerShare) / (1e12)) - user.rewardDebt;</span>
-<span class="cstat-no" title="statement not covered" >        _giveRewards(pending, pool.feePercentage)</span>;
-<span class="cstat-no" title="statement not covered" >        user.enteredAt = block.timestamp &gt; startTime ? block.timestamp : startTime</span>;
-<span class="cstat-no" title="statement not covered" >        user.amount -= _amount</span>;
-<span class="cstat-no" title="statement not covered" >        pool.totalStaked -= _amount</span>;
-<span class="cstat-no" title="statement not covered" >        user.rewardDebt = (user.amount * (pool.accRewardPerShare)) / 1e12</span>;
-<span class="cstat-no" title="statement not covered" >        pool.token.safeTransfer(_msgSender(), _amount)</span>;
-<span class="cstat-no" title="statement not covered" >        emit Withdraw(_msgSender(), _pid, _amount);</span>
+    function updatePool(uint256 pid) public returns (PoolInfo memory pool) {
+        pool = poolInfo[pid];
+        if (block.timestamp &lt;= pool.lastRewardTime) {
+            return pool;
+        }
+        uint256 numberOfPeriodsPassed = block.timestamp - pool.lastRewardTime;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (numberOfPeriodsPassed &gt; 0) {
+            uint256 lpSupply = pool.totalStaked;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (lpSupply &gt; 0) {
+                uint256 sushiReward = numberOfPeriodsPassed * rewardPerSecond * pool.allocPoint / totalAllocPoint;
+                rewardToken.mint(address(this), sushiReward);
+                pool.accRewardPerShare += uint128(sushiReward * ACC_SUSHI_PRECISION / lpSupply);
+            }
+            pool.lastRewardTime = uint64(block.timestamp);
+            poolInfo[pid] = pool;
+        }
     }
 &nbsp;
-    /**
-    @notice function to withdraw all token amount from a given pool, doesn't transfer rewards, should be called in emergency scenario
-    @param _pid pool ID
-    */
-<span class="fstat-no" title="function not covered" >    function emergencyWithdraw(uint256 _pid) external nonReentrant {</span>
+    function deposit(uint256 pid, uint256 amount, address to) public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(amount &gt; 0, "Cannot deposit zero");
+        PoolInfo memory pool = updatePool(pid);
+        UserInfo storage user = userInfo[pid][to];
+&nbsp;
+        // Effects
+        user.amount += amount;
+        user.rewardDebt += int256(amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
+        user.enteredAt = block.timestamp &gt; startTime ? block.timestamp : startTime;
+        poolInfo[pid].totalStaked += amount;
+&nbsp;
+        // Interaction
+&nbsp;
+        stakeToken[pid].safeTransferFrom(msg.sender, address(this), amount);
+&nbsp;
+        // emit Deposit(msg.sender, pid, amount, to);
+    }
+&nbsp;
+    function withdraw(uint256 pid, uint256 amount, address to) public {
+        PoolInfo memory pool = updatePool(pid);
+        UserInfo storage user = userInfo[pid][to];
+&nbsp;
+        // Effects
+        user.rewardDebt -= int256(amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
+        // console.log("StakingV2: withdraw(): user.amount = ", user.amount);
+        // console.log("StakingV2: withdraw(): pool.totalStaked = ", pool.totalStaked);
+        user.amount -= amount;
+        poolInfo[pid].totalStaked -= amount;
+&nbsp;
+        // Interactions
+        
+        stakeToken[pid].safeTransfer(to, amount);
+&nbsp;
+        // emit Withdraw(msg.sender, pid, amount, to);
+    }
+&nbsp;
+    function harvest(uint256 pid, address to) public {
+        PoolInfo memory pool = updatePool(pid);
+        UserInfo storage user = userInfo[pid][msg.sender];
+        int256 accumulatedReward = int256(user.amount * pool.accRewardPerShare / ACC_SUSHI_PRECISION);
+        uint256 _pendingReward = uint256(accumulatedReward - user.rewardDebt);
+        console.log("harvest: _pendingReward = ", _pendingReward);
+        console.log("harvest: user.rewardDebt = ", uint256(user.rewardDebt));
+        console.log("harvest: accumulatedReward = ", uint256(accumulatedReward));
+        console.log("harvest: user.amount = ", user.amount);
+        console.log("harvest: pool.accRewardPerShare = ", pool.accRewardPerShare);
+        console.log("harvest: ACC_SUSHI_PRECISION = ", ACC_SUSHI_PRECISION);
+        // console.log("StakingV2: harvest(): user.enteredAt  = ", user.enteredAt);
+        // console.log("StakingV2: harvest(): block.timestamp = ", block.timestamp);
+&nbsp;
+        require(excludedFromFee[_msgSender()] || user.enteredAt + DAY &lt;= block.timestamp, "Cannot harvest yet");
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_pendingReward &gt; 0) {
+            _giveRewards(_pendingReward, pool.feePercentage);
+        }
+&nbsp;
+        user.rewardDebt = accumulatedReward; 
+        user.enteredAt = block.timestamp &gt; startTime ? block.timestamp : startTime;
+&nbsp;
+        // Effects
+&nbsp;
+        // emit Harvest(msg.sender, pid, _pendingReward);
+    }
+&nbsp;
+    // Withdraw without caring about rewards. EMERGENCY ONLY.
+<span class="fstat-no" title="function not covered" >    function emergencyWithdraw(uint256 _pid) public {</span>
 <span class="cstat-no" title="statement not covered" >        PoolInfo storage pool = poolInfo[_pid];</span>
-<span class="cstat-no" title="statement not covered" >        UserInfo storage user = userInfo[_pid][_msgSender()];</span>
-<span class="cstat-no" title="statement not covered" >        pool.token.safeTransfer(_msgSender(), user.amount)</span>;
-<span class="cstat-no" title="statement not covered" >        pool.totalStaked -= user.amount</span>;
+<span class="cstat-no" title="statement not covered" >        UserInfo storage user = userInfo[_pid][msg.sender];</span>
+<span class="cstat-no" title="statement not covered" >        stakeToken[_pid].safeTransfer(address(msg.sender), user.amount)</span>;
+        // emit EmergencyWithdraw(msg.sender, _pid, user.amount);
 <span class="cstat-no" title="statement not covered" >        user.amount = 0</span>;
 <span class="cstat-no" title="statement not covered" >        user.rewardDebt = 0</span>;
-<span class="cstat-no" title="statement not covered" >        emit EmergencyWithdraw(_msgSender(), _pid, user.amount);</span>
+<span class="cstat-no" title="statement not covered" >        pool.totalStaked -= user.amount</span>;
+&nbsp;
     }
 &nbsp;
     /**
     @notice function to get referral program reward for caller
     */
-<span class="fstat-no" title="function not covered" >    function getReferralReward() external nonReentrant {</span>
-<span class="cstat-no" title="statement not covered" >        require(referralDetails[_msgSender()][0] &gt;= minReferralReward, "Not enough referral reward collected")</span>;
-<span class="cstat-no" title="statement not covered" >        REWARD_TOKEN.mint(_msgSender(), referralDetails[_msgSender()][0])</span>;
-<span class="cstat-no" title="statement not covered" >        referralDetails[_msgSender()][0] = 0</span>;
-<span class="cstat-no" title="statement not covered" >        referralDetails[_msgSender()][1] = block.timestamp</span>;
+    function getReferralReward() external {
+        require(referralDetails[_msgSender()][0] &gt;= minReferralReward, "Not enough referral reward collected");
+        rewardToken.mint(_msgSender(), referralDetails[_msgSender()][0]);
+        referralDetails[_msgSender()][0] = 0;
+        referralDetails[_msgSender()][1] = block.timestamp;
     }
 &nbsp;
-    /**
-    @notice function to manually update all existing pools
-    */
-<span class="fstat-no" title="function not covered" >    function massUpdatePools() public {</span>
-<span class="cstat-no" title="statement not covered" >        uint256 length = poolInfo.length;</span>
-<span class="cstat-no" title="statement not covered" >        for (uint256 pid = 0; pid &lt; length; ++pid) {</span>
-<span class="cstat-no" title="statement not covered" >            updatePool(pid)</span>;
+    function _giveRewards(uint256 rewardAmount, uint256 feePercentage) private {
+        console.log("_giveRewards: excludedFromFee = ", excludedFromFee[_msgSender()]);
+        console.log("_giveRewards: rewardAmount = ", rewardAmount);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (excludedFromFee[_msgSender()]) {
+<span class="cstat-no" title="statement not covered" >            rewardToken.safeTransfer(_msgSender(), rewardAmount)</span>;
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+        uint256 fees = rewardAmount - ((rewardAmount * (PERCENT_BASE - feePercentage)) / PERCENT_BASE);
+        uint256 half = fees / 2;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (half &gt; 0) {
+            rewardToken.safeTransfer(burnAddress, half);
+        }
+        feesCollected += fees - half;
+        address referrer = referralProgram.referrers(_msgSender());
+        referralDetails[referrer][0] += (rewardAmount * referralPercent) / PERCENT_BASE;
+        if (referralDetails[referrer][1] == 0 &amp;&amp; referrer != address(0)) {
+            referralDetails[referrer][1] = block.timestamp &gt; startTime ? block.timestamp : startTime;
+        }
+        rewardAmount -= fees;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (rewardAmount &gt; 0) {
+            rewardToken.safeTransfer(_msgSender(), rewardAmount);
         }
     }
 &nbsp;
-    /**
-    @notice function to manually update a given pool
-    @param _pid pool ID
-    */
-<span class="fstat-no" title="function not covered" >    function updatePool(uint256 _pid) public {</span>
-<span class="cstat-no" title="statement not covered" >        PoolInfo storage pool = poolInfo[_pid];</span>
-<span class="cstat-no" title="statement not covered" >        if (block.timestamp &lt;= pool.lastRewardTime) {</span>
-<span class="cstat-no" title="statement not covered" >            return;</span>
-        }
-<span class="cstat-no" title="statement not covered" >        uint256 supply = pool.totalStaked;</span>
-<span class="cstat-no" title="statement not covered" >        if (supply == 0) {</span>
-<span class="cstat-no" title="statement not covered" >            pool.lastRewardTime = block.timestamp</span>;
-<span class="cstat-no" title="statement not covered" >            return;</span>
-        }
-<span class="cstat-no" title="statement not covered" >        uint256 multiplier = block.timestamp - pool.lastRewardTime;</span>
-<span class="cstat-no" title="statement not covered" >        uint256 reward = (multiplier * rewardPerSecond * pool.allocPoint) / totalAllocPoint;</span>
-<span class="cstat-no" title="statement not covered" >        pool.accRewardPerShare += (reward * 1e12) / supply</span>;
-<span class="cstat-no" title="statement not covered" >        pool.lastRewardTime = block.timestamp</span>;
-    }
-&nbsp;
-<span class="fstat-no" title="function not covered" >    function _giveRewards(uint256 rewardAmount, uint256 feePercentage) private {</span>
-<span class="cstat-no" title="statement not covered" >        if (excludedFromFee[_msgSender()]) {</span>
-<span class="cstat-no" title="statement not covered" >            REWARD_TOKEN.mint(_msgSender(), rewardAmount)</span>;
-<span class="cstat-no" title="statement not covered" >            return;</span>
-        }
-<span class="cstat-no" title="statement not covered" >        uint256 fees = rewardAmount - ((rewardAmount * (PERCENT_BASE - feePercentage)) / PERCENT_BASE);</span>
-<span class="cstat-no" title="statement not covered" >        uint256 half = fees / 2;</span>
-<span class="cstat-no" title="statement not covered" >        if (half &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            REWARD_TOKEN.mint(burnAddress, half)</span>;
-        }
-<span class="cstat-no" title="statement not covered" >        feesCollected += fees - half</span>;
-<span class="cstat-no" title="statement not covered" >        address referrer = referralProgram.referrers(_msgSender());</span>
-<span class="cstat-no" title="statement not covered" >        referralDetails[referrer][0] += (rewardAmount * referralPercent) / PERCENT_BASE</span>;
-<span class="cstat-no" title="statement not covered" >        if (referralDetails[referrer][1] == 0 &amp;&amp; referrer != address(0)) {</span>
-<span class="cstat-no" title="statement not covered" >            referralDetails[referrer][1] = block.timestamp &gt; startTime ? block.timestamp : startTime</span>;
-        }
-<span class="cstat-no" title="statement not covered" >        rewardAmount -= fees</span>;
-<span class="cstat-no" title="statement not covered" >        if (rewardAmount &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            REWARD_TOKEN.mint(_msgSender(), rewardAmount)</span>;
-        }
-    }
 }
+&nbsp;
+//TODO Reentrancy guard
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

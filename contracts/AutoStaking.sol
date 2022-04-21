@@ -8,6 +8,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "./interfaces/IStaking.sol";
+import "hardhat/console.sol";
 
 contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
     using SafeERC20 for IERC20;
@@ -75,7 +76,7 @@ contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
     }
 
     function restake() external whenNotPaused nonReentrant notContract {
-        STAKING.harvest(0);
+        STAKING.harvest(0, address(this));
 
         uint256 bal = _balance();
         uint256 currentPerformanceFee = bal * performanceFee / 10000;
@@ -105,8 +106,13 @@ contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
             fees += currentWithdrawFee;
             currentAmount -= currentWithdrawFee;
         }
+        console.log("currentAmount = ", currentAmount);
+        // console.log("needed     = ", needed);
+
 
         TOKEN.safeTransfer(_msgSender(), currentAmount);
+
+
 
         emit Withdraw(_msgSender(), currentAmount, _shares);
     }
@@ -155,6 +161,9 @@ contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
 
     function total() public view returns(uint256) {
         (uint256 amount, , ) = STAKING.userInfo(0, address(this));
+        console.log("AutoStaking: total(): amount  = ", amount);
+        console.log("AutoStaking: total(): fees    = ", fees);
+        console.log("AutoStaking: total(): balance = ", TOKEN.balanceOf(address(this)));
         return _balance() + amount;
     }
 
@@ -164,13 +173,14 @@ contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
         }
         uint256 needed = amount - _balance();
         if (STAKING.pendingReward(0, address(this)) > 0) {
-            STAKING.harvest(0);
+            STAKING.harvest(0, address(this));
             if (_balance() >= amount) {
                 return;
             }
             needed = amount - _balance();
         }
-        STAKING.withdraw(0, needed);
+
+        STAKING.withdraw(0, needed, address(this));
     }
 
     function _balance() private view returns(uint256) {
@@ -180,7 +190,7 @@ contract AutoStaking is Ownable, Pausable, ReentrancyGuard {
     function _deposit() private {
         uint256 balance = _balance();
         if (balance > 0) {
-            STAKING.deposit(0, balance);
+            STAKING.deposit(0, balance, address(this));
         }
     }
 }
